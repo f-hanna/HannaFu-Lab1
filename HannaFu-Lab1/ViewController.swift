@@ -9,12 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var originalPrice: UITextField!
+    @IBOutlet weak var discount: UITextField!
+    @IBOutlet weak var salesTax: UITextField!
+    
+    @IBOutlet weak var finalPrice: UILabel!
+    @IBOutlet weak var priceButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("test")
+        print("in main")
     }
-
-
+    
+    @IBAction func priceButton(_ sender: UIButton) {
+       
+    }
+    
 }
 
