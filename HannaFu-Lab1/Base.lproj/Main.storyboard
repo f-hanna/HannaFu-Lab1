@@ -49,45 +49,45 @@
                                 <rect key="frame" x="68" y="314" width="290" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 <connections>
                                     <action selector="getPrice:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Md5-6U-wpd"/>
+                                    <action selector="priceCalc:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="iDg-G7-CdH"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="%" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-1u-3HX">
                                 <rect key="frame" x="69" y="421" width="290" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="%" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="l8N-f3-oMb">
                                 <rect key="frame" x="69" y="534" width="290" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Price ($): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H44-UD-g1a">
-                                <rect key="frame" x="69" y="647" width="133" height="38"/>
+                                <rect key="frame" x="131" y="663" width="133" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-78-7ZB">
-                                <rect key="frame" x="194" y="656" width="35" height="21"/>
+                                <rect key="frame" x="256" y="672" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMm-tN-nYN">
-                                <rect key="frame" x="161" y="693" width="108" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgv-Yu-qPJ">
+                                <rect key="frame" x="143" y="615" width="108" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Find Price!"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calculate"/>
                                 <connections>
-                                    <action selector="calcFinal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRi-5Z-bL3"/>
-                                    <action selector="priceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4C-JD-y2P"/>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Blx-Am-TTd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,10 +95,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="calculate" destination="Kgv-Yu-qPJ" id="EAH-wP-VnX"/>
                         <outlet property="discount" destination="Ld8-1u-3HX" id="LMw-Cr-2H3"/>
                         <outlet property="finalPrice" destination="Wey-78-7ZB" id="VPH-sa-pmy"/>
                         <outlet property="originalPrice" destination="Dt0-2w-2GB" id="MCn-6K-1eX"/>
-                        <outlet property="priceButton" destination="nMm-tN-nYN" id="XYr-2H-L3t"/>
                         <outlet property="salesTax" destination="l8N-f3-oMb" id="JDj-fw-xKi"/>
                     </connections>
                 </viewController>
